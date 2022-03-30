@@ -21,7 +21,7 @@ selected_sex = st.selectbox(
 )
 df = df[(df['derived_race'] == selected_race) & (df['derived_sex'] == selected_sex)]
 new = df.groupby(["state_code"])[["approved", "property_value"]].mean()
-plot = plt.scatter(data = new,x='approved',y='property_value')
+plot = plt.scatter(data = new,x='property_value',y='approved')
 st.pyplot(plt.gcf())
 
 
