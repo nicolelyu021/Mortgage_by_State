@@ -6,7 +6,7 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
-df = pd.read_csv('/work/practice-project-dataset-mortgage.csv', encoding = 'latin') 
+df = pd.read_csv('practice-project-dataset-mortgage.csv', encoding = 'latin') 
 df['property_value'] = df['property_value'].replace('Exempt',np.nan).astype(float)
 df['approved'] = (df['action_taken'] == 1) | (df['action_taken'] == 2)
 
